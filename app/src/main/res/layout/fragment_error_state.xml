@@ -24,44 +24,38 @@
 
         <TextView
             android:id="@+id/error_message_title"
+            style="@style/title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:gravity="center"
-            android:textSize="18sp"
-            android:fontFamily="@font/roboto_bold"
-            android:textColor="#4A4A4A"
-            android:text="Something went wrong..."
+            android:text="@string/error_message_title"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/error_image" />
 
         <TextView
             android:id="@+id/error_message_sub_title"
+            style="@style/subTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:fontFamily="@font/roboto_regular"
             android:gravity="center"
-            android:text="An alien is probably blocking your signal"
-            android:textColor="#929292"
-            android:textSize="18sp"
+            android:text="@string/error_message_subtitle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/error_message_title" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/retry_button"
-            style="?attr/materialButtonOutlinedStyle"
+            style="@style/outline_button_style"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp"
+            android:padding="@dimen/button_padding"
             android:text="@string/button_title_retry"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:strokeColor="#31B057"
-            app:strokeWidth="1dp" />
+            app:layout_constraintStart_toStartOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

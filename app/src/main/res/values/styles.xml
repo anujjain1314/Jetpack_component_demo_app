@@ -18,6 +18,31 @@
 
 
     <!-- Basic styling for the buttons. -->
+    <style name="outline_button_style" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textAppearance">@style/button_title</item>
+        <item name="strokeColor">@color/colorPrimary</item>
+        <item name="strokeWidth">1dp</item>
+    </style>
+
+    <style name="button_title" parent="TextAppearance.MaterialComponents.Button">
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+
+
+
+    <!-- Basic styling for the textViews. -->
+    <style name="title">
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textColor">@color/headingTextColor</item>
+    </style>
+
+    <style name="subTitle">
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textColor">@color/subHeadingTextColor</item>
+    </style>
 
 
 </resources>

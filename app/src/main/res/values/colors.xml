@@ -3,4 +3,9 @@
     <color name="colorPrimary">#31B057</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+
+    <color name="white">#FFFFFF</color>
+    
+    <color name="headingTextColor">#4A4A4A</color>
+    <color name="subHeadingTextColor">#929292</color>
 </resources>
