@@ -1,4 +1,4 @@
-package com.anujjain.GetMegaAssignment
+package com.anujjain.getMegaAssignment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

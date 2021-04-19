@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="com.anujjain.GetMegaAssignment.FirstFragment"
+        android:name="com.anujjain.getMegaAssignment.FirstFragment"
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_first">
 
@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
-        android:name="com.anujjain.GetMegaAssignment.SecondFragment"
+        android:name="com.anujjain.getMegaAssignment.SecondFragment"
         android:label="@string/second_fragment_label"
         tools:layout="@layout/fragment_second">
 
