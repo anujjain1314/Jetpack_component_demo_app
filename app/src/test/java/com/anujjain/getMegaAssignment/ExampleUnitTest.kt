@@ -1,4 +1,4 @@
-package com.anujjain.GetMegaAssignment
+package com.anujjain.getMegaAssignment
 
 import org.junit.Test
 
