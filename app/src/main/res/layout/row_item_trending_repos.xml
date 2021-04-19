@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/quality_image"
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            android:layout_marginStart="@dimen/activity_padding"
+            android:layout_marginTop="@dimen/activity_padding" />
+
+        <TextView
+            android:id="@+id/sleep_length"
+            style="@style/heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_padding"
+            android:layout_marginTop="@dimen/activity_padding"
+            android:layout_marginEnd="@dimen/activity_padding"
+            android:layout_toEndOf="@id/quality_image"
+            tools:text="mBinary" />
+
+        <TextView
+            android:id="@+id/quality_string"
+            style="@style/sub_heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_padding"
+            android:layout_marginEnd="@dimen/activity_padding"
+            android:layout_marginTop="6dp"
+            android:layout_toEndOf="@id/quality_image"
+            android:layout_below="@id/sleep_length"
+            tools:text="USTC-CS-course-resources" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/quality_string"
+            android:layout_marginTop="@dimen/activity_padding"
+            android:background="@color/dividerFillColor"/>
+    </RelativeLayout>
+</layout>

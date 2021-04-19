@@ -44,5 +44,17 @@
         <item name="android:textColor">@color/subHeadingTextColor</item>
     </style>
 
+    <style name="heading">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textColor">@color/row_heading</item>
+    </style>
+
+    <style name="sub_heading">
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textColor">@color/row_sub_heading</item>
+    </style>
+
 
 </resources>

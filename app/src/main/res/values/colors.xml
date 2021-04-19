@@ -5,7 +5,14 @@
     <color name="colorAccent">#03DAC5</color>
 
     <color name="white">#FFFFFF</color>
-    
+
+    <color name="row_heading">#52575C</color>
+    <color name="row_sub_heading">#52575C</color>
+
     <color name="headingTextColor">#4A4A4A</color>
     <color name="subHeadingTextColor">#929292</color>
+
+    <color name="dividerFillColor">#E8E8E8</color>
+
+
 </resources>
