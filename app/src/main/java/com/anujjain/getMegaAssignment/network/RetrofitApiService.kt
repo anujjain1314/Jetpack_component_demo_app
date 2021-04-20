@@ -1,6 +1,6 @@
-package com.anujjain.getMegaAssignment.trendingRepo.network
+package com.anujjain.getMegaAssignment.network
 
-import com.anujjain.getMegaAssignment.trendingRepo.ApplicationSettings
+import com.anujjain.getMegaAssignment.ApplicationSettings
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

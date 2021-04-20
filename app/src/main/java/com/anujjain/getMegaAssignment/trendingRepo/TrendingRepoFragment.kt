@@ -17,8 +17,10 @@ class TrendingRepoFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding : FragmentTrendingReposBinding = DataBindingUtil.inflate(inflater,
-            R.layout.fragment_trending_repos,container,false)
+        val binding: FragmentTrendingReposBinding = DataBindingUtil.inflate(
+            inflater,
+            R.layout.fragment_trending_repos, container, false
+        )
 
         val viewModel = ViewModelProvider(this).get(TrendingRepoViewModel::class.java)
 
@@ -29,10 +31,16 @@ class TrendingRepoFragment : Fragment() {
         binding.viewModel = viewModel
 
         viewModel.errorFoundEvent.observe(viewLifecycleOwner, Observer { errorFound ->
-            if(errorFound == true){
+            if (errorFound == true) {
                 findNavController().navigate(R.id.action_trendingRepoFragment_to_networkErrorFragment)
             }
 
+        })
+
+        viewModel.repoList.observe(viewLifecycleOwner, Observer { list ->
+            val adapter = TrendingRepoAdapter()
+            adapter.submitList(list)
+            binding.sleepList.adapter = adapter
         })
 
         setHasOptionsMenu(true)

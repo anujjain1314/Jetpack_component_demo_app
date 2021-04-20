@@ -1,10 +1,10 @@
-package com.anujjain.getMegaAssignment.trendingRepo.network
+package com.anujjain.getMegaAssignment.network
 
 
 
 
 
-data class TrendingRepoResponseModel (
+data class TrendingRepoDataModel (
     val author : String,
     val name : String,
     val avatar : String,
