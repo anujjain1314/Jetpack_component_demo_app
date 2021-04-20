@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.*
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import com.anujjain.getMegaAssignment.R
 import com.anujjain.getMegaAssignment.databinding.FragmentTrendingReposBinding
 
@@ -16,6 +17,14 @@ class TrendingRepoFragment : Fragment() {
     ): View? {
         val binding : FragmentTrendingReposBinding = DataBindingUtil.inflate(inflater,
             R.layout.fragment_trending_repos,container,false)
+
+        val viewModel = ViewModelProvider(this).get(TrendingRepoViewModel::class.java)
+
+        // Allows Data Binding to Observe LiveData with the lifecycle of this Fragment
+        binding.lifecycleOwner = this
+
+        // Giving the binding access to the TrendingRepoViewModel
+        binding.viewModel = viewModel
 
         setHasOptionsMenu(true)
 
