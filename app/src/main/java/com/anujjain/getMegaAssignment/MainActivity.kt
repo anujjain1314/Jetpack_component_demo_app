@@ -8,6 +8,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.fragment_trending_repos)
+        setContentView(R.layout.activity_main)
     }
 }
