@@ -5,6 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+        <import type="com.anujjain.getMegaAssignment.ApiStatus"/>
+        <import type="android.view.View"/>
         <variable
             name="viewModel"
             type="com.anujjain.getMegaAssignment.trendingRepo.TrendingRepoViewModel" />
@@ -19,6 +21,7 @@
             android:id="@+id/loading_bar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:visibility="@{ viewModel.apiStatus == ApiStatus.LOADING ? View.VISIBLE : View.GONE }"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
