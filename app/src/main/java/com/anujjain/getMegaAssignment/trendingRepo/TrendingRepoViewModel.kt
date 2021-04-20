@@ -14,6 +14,20 @@ class TrendingRepoViewModel : ViewModel() {
     private val mData = MutableLiveData<String>()
     val data : LiveData<String> get() = mData
 
+
+
+    /**
+     * Redirects to [NetworkErrorFragment] by setting this value to true when api call occurs.
+     *
+     * This is private because we don't want to expose setting this value outside.
+     */
+    private val mErrorFoundEvent = MutableLiveData<Boolean>()
+    /**
+     * observed in the [TrendingRepoFragment],
+     * when value is [true], it navigates to [NetworkErrorFragment]
+     */
+    val errorFoundEvent : LiveData<Boolean> get() = mErrorFoundEvent
+
     init {
         getData()
     }
@@ -22,9 +36,10 @@ class TrendingRepoViewModel : ViewModel() {
         viewModelScope.launch {
             try {
                 val listResult = RetrofitApiService.create().getTrendingRepos()
-                mData.value = listResult.size.toString()
+                mData.value = listResult?.size.toString()
             }catch (e: Exception){
                 mData.value = e.message
+                mErrorFoundEvent.value = true
             }
         }
     }

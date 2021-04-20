@@ -8,5 +8,18 @@
         android:id="@+id/trendingRepoFragment"
         android:name="com.anujjain.getMegaAssignment.trendingRepo.TrendingRepoFragment"
         android:label="TrendingRepoFragment"
-        tools:layout="@layout/fragment_trending_repos"/>
+        tools:layout="@layout/fragment_trending_repos">
+        <action
+            android:id="@+id/action_trendingRepoFragment_to_networkErrorFragment"
+            app:destination="@id/networkErrorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/networkErrorFragment"
+        android:name="com.anujjain.getMegaAssignment.errorStates.NetworkErrorFragment"
+        android:label="NetworkErrorFragment"
+        tools:layout="@layout/fragment_error_state">
+        <action
+            android:id="@+id/action_networkErrorFragment_to_trendingRepoFragment"
+            app:destination="@id/trendingRepoFragment" />
+    </fragment>
 </navigation>

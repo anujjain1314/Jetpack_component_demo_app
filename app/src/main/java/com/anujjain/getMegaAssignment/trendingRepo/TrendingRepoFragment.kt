@@ -4,7 +4,9 @@ import android.os.Bundle
 import android.view.*
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.anujjain.getMegaAssignment.R
 import com.anujjain.getMegaAssignment.databinding.FragmentTrendingReposBinding
 
@@ -25,6 +27,13 @@ class TrendingRepoFragment : Fragment() {
 
         // Giving the binding access to the TrendingRepoViewModel
         binding.viewModel = viewModel
+
+        viewModel.errorFoundEvent.observe(viewLifecycleOwner, Observer { errorFound ->
+            if(errorFound == true){
+                findNavController().navigate(R.id.action_trendingRepoFragment_to_networkErrorFragment)
+            }
+
+        })
 
         setHasOptionsMenu(true)
 
