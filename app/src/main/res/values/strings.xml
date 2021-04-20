@@ -14,4 +14,6 @@
     <string name="button_title_retry">Retry</string>
     <string name="error_message_subtitle">An alien is probably blocking your signal</string>
     <string name="error_message_title">Something went wrong...</string>
+    <string name="menu_title_sort_by_stars">Sort by stars</string>
+    <string name="menu_title_sort_by_name">Sort by name</string>
 </resources>
