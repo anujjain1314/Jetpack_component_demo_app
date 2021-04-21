@@ -31,11 +31,6 @@ class TrendingRepoAdapter : ListAdapter<TrendingRepoDataModel,TrendingRepoAdapte
         fun bind(dataModel : TrendingRepoDataModel){
             itemBinding.dataModel = dataModel
 
-            // Get the state
-            // Get the state
-            val expanded: Boolean = dataModel.expanded
-            // Set the visibility based on state
-            // Set the visibility based on state
             // This is important, because it forces the data binding to execute immediately,
             // which allows the RecyclerView to make the correct view size measurements
             itemBinding.executePendingBindings()

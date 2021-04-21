@@ -38,7 +38,7 @@
 
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/sleep_list"
+                android:id="@+id/sleep_list_recycler_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toTopOf="parent"

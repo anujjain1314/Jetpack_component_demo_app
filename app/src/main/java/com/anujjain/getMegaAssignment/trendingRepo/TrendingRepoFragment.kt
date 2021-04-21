@@ -34,10 +34,11 @@ class TrendingRepoFragment : Fragment() {
         binding.viewModel = viewModel
 
         // Removes blinks
-        // Removes blinks
-        (binding.sleepList.itemAnimator as SimpleItemAnimator).supportsChangeAnimations = false
+        (binding.sleepListRecyclerView.itemAnimator as SimpleItemAnimator).supportsChangeAnimations = false
 
-
+        /**
+         * observe the [viewModel.apiStatus] and navigate to [NetworkErrorFragment] when its value is [ApiStatus.ERROR]
+         */
         viewModel.apiStatus.observe(viewLifecycleOwner, Observer { apiStatus ->
             if (apiStatus == ApiStatus.ERROR) {
                 findNavController().navigate(R.id.action_trendingRepoFragment_to_networkErrorFragment)
@@ -45,10 +46,13 @@ class TrendingRepoFragment : Fragment() {
 
         })
 
+        /**
+         * observe the [viewModel.repoList] and displays new data in sleepListRecyclerView
+         */
         viewModel.repoList.observe(viewLifecycleOwner, Observer { list ->
             val adapter = TrendingRepoAdapter()
             adapter.submitList(list)
-            binding.sleepList.adapter = adapter
+            binding.sleepListRecyclerView.adapter = adapter
         })
 
         setHasOptionsMenu(true)
