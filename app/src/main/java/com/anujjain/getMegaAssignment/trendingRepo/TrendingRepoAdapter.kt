@@ -17,11 +17,25 @@ class TrendingRepoAdapter : ListAdapter<TrendingRepoDataModel,TrendingRepoAdapte
     override fun onBindViewHolder(holder: TrendingRepoViewHolder, position: Int) {
         val dataModel = getItem(position)
         holder.bind(dataModel)
+        holder.itemView.setOnClickListener { v ->
+            // Get the current state of the item
+            val expanded: Boolean = dataModel.expanded
+            // Change the state
+            dataModel.expanded = !expanded
+            // Notify the adapter that item has changed
+            notifyItemChanged(position)
+        }
     }
 
     class TrendingRepoViewHolder(val itemBinding : RowItemTrendingReposBinding) : RecyclerView.ViewHolder(itemBinding.root){
         fun bind(dataModel : TrendingRepoDataModel){
             itemBinding.dataModel = dataModel
+
+            // Get the state
+            // Get the state
+            val expanded: Boolean = dataModel.expanded
+            // Set the visibility based on state
+            // Set the visibility based on state
             // This is important, because it forces the data binding to execute immediately,
             // which allows the RecyclerView to make the correct view size measurements
             itemBinding.executePendingBindings()

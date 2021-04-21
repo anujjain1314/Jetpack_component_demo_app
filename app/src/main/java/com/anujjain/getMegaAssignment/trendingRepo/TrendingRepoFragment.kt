@@ -7,9 +7,11 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.SimpleItemAnimator
 import com.anujjain.getMegaAssignment.ApiStatus
 import com.anujjain.getMegaAssignment.R
 import com.anujjain.getMegaAssignment.databinding.FragmentTrendingReposBinding
+
 
 class TrendingRepoFragment : Fragment() {
 
@@ -30,6 +32,11 @@ class TrendingRepoFragment : Fragment() {
 
         // Giving the binding access to the TrendingRepoViewModel
         binding.viewModel = viewModel
+
+        // Removes blinks
+        // Removes blinks
+        (binding.sleepList.itemAnimator as SimpleItemAnimator).supportsChangeAnimations = false
+
 
         viewModel.apiStatus.observe(viewLifecycleOwner, Observer { apiStatus ->
             if (apiStatus == ApiStatus.ERROR) {

@@ -4,14 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+        <import type="android.view.View"/>
         <variable
             name="dataModel"
             type="com.anujjain.getMegaAssignment.network.TrendingRepoDataModel" />
+
     </data>
 
     <RelativeLayout
+        android:id="@+id/parent_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground">
 
         <ImageView
             android:id="@+id/repo_author_image"
@@ -19,7 +23,7 @@
             android:layout_height="@dimen/icon_size"
             android:layout_marginStart="@dimen/activity_padding"
             android:layout_marginTop="@dimen/activity_padding"
-            app:imageUrl="@{dataModel.avatar}"/>
+            app:imageUrl="@{dataModel.avatar}" />
 
         <TextView
             android:id="@+id/author_name"
@@ -40,17 +44,95 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/activity_padding"
             android:layout_marginEnd="@dimen/activity_padding"
-            android:layout_marginTop="6dp"
+            android:layout_marginTop="8dp"
             android:text="@{dataModel.name}"
             android:layout_toEndOf="@id/repo_author_image"
             android:layout_below="@id/author_name"
             tools:text="USTC-CS-course-resources" />
 
+        <RelativeLayout
+            android:id="@+id/other_info_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/repo_name"
+            android:layout_alignStart="@id/repo_name"
+            android:visibility="@{dataModel.expanded ? View.VISIBLE : View.GONE}"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:id="@+id/desc"
+                style="@style/heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{dataModel.getDesc()}"
+                tools:text="Container Runtime Sandbox https://github.com/google/gvisor" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_below="@id/desc">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:padding="3dp"
+                    android:src="@drawable/rounded_circle_red"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{dataModel.language}"
+                    android:textSize="12sp"
+                    android:layout_marginStart="4dp"
+                    tools:text="C++"
+                    android:textColor="#52575C"/>
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginStart="@dimen/activity_padding"
+                    android:src="@mipmap/star_yellow_16"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{dataModel.stars}"
+                    android:textSize="12sp"
+                    android:layout_marginStart="4dp"
+                    tools:text="C++"
+                    android:textColor="#52575C"/>
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginStart="@dimen/activity_padding"
+                    android:src="@mipmap/fork_black_16"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{dataModel.forks}"
+                    android:textSize="12sp"
+                    android:layout_marginStart="4dp"
+                    tools:text="C++"
+                    android:textColor="#52575C"/>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_below="@id/repo_name"
+            android:visibility="@{dataModel.expanded ? View.GONE : View.VISIBLE}"
             android:layout_marginTop="@dimen/activity_padding"
+            android:background="@color/dividerFillColor"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/other_info_layout"
+            android:visibility="@{dataModel.expanded ? View.VISIBLE : View.GONE}"
+            android:layout_marginTop="@dimen/activity_padding"
+            android:elevation="14dp"
             android:background="@color/dividerFillColor"/>
     </RelativeLayout>
 </layout>

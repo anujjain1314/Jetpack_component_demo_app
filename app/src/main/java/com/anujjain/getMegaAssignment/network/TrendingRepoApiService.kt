@@ -12,11 +12,15 @@ data class TrendingRepoDataModel (
     val description : String,
     val language : String,
     val languageColor : String,
-    val stars : Int,
-    val forks : Int,
+    val stars : String,
+    val forks : String,
     val currentPeriodStars : Int,
-    val builtBy : List<BuiltBy>
-)
+    val builtBy : List<BuiltBy>,
+    // to store State of the item
+    var expanded : Boolean = false
+){
+    fun getDesc() : String = "$description ($url)"
+}
 
 data class BuiltBy (
 
