@@ -12,8 +12,8 @@ data class TrendingRepoDataModel (
     val description : String,
     val language : String,
     val languageColor : String,
-    val stars : String,
-    val forks : String,
+    val stars : Int,
+    val forks : Int,
     val currentPeriodStars : Int,
     val builtBy : List<BuiltBy>,
     // to store State of the item

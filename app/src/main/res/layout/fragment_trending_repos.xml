@@ -17,10 +17,11 @@
         android:layout_height="match_parent"
         tools:context=".trendingRepo.TrendingRepoFragment">
 
-        <ProgressBar
+        <ImageView
             android:id="@+id/loading_bar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/loading_animation"
             android:visibility="@{ viewModel.apiStatus == ApiStatus.LOADING ? View.VISIBLE : View.GONE }"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"

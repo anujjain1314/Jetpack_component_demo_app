@@ -5,6 +5,7 @@
 
     <data>
         <import type="android.view.View"/>
+        <import type="android.graphics.Color"/>
         <variable
             name="dataModel"
             type="com.anujjain.getMegaAssignment.network.TrendingRepoDataModel" />
@@ -77,7 +78,9 @@
                     android:layout_width="16dp"
                     android:layout_height="16dp"
                     android:padding="3dp"
-                    android:src="@drawable/rounded_circle_red"/>
+                    android:tint="@{Color.parseColor(dataModel.languageColor)}"
+                    android:src="@drawable/rounded_circle_red"
+                    tools:ignore="UseAppTint" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -95,7 +98,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@{dataModel.stars}"
+                    android:text="@{String.valueOf(dataModel.stars)}"
                     android:textSize="12sp"
                     android:layout_marginStart="4dp"
                     tools:text="C++"
@@ -108,7 +111,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@{dataModel.forks}"
+                    android:text="@{String.valueOf(dataModel.forks)}"
                     android:textSize="12sp"
                     android:layout_marginStart="4dp"
                     tools:text="C++"
