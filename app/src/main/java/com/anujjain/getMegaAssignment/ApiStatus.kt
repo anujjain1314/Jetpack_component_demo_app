@@ -1,5 +1,5 @@
 package com.anujjain.getMegaAssignment
 
 enum class ApiStatus {
-    LOADING, ERROR, DONE
+    LOADING, ERROR, DONE, REFRESH
 }

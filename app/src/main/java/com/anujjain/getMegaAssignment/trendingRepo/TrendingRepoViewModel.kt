@@ -26,13 +26,13 @@ class TrendingRepoViewModel : ViewModel() {
      * Call getRepoData() on init so we can display status immediately.
      */
     init {
-        getRepoData()
+        getRepoData(false)
     }
 
 
-    private fun getRepoData() {
+    private fun getRepoData(isRefresh:Boolean) {
         viewModelScope.launch {
-            _apiStatus.value = ApiStatus.LOADING
+            _apiStatus.value = if(isRefresh)ApiStatus.REFRESH else ApiStatus.LOADING
             try {
                 val listResult = RetrofitApiService.create().getTrendingRepos()
                 _repoList.value = listResult
@@ -42,5 +42,9 @@ class TrendingRepoViewModel : ViewModel() {
                 _apiStatus.value = ApiStatus.ERROR
             }
         }
+    }
+
+    fun onRefresh(){
+        getRepoData(true)
     }
 }

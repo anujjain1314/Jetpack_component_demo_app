@@ -12,34 +12,42 @@
             type="com.anujjain.getMegaAssignment.trendingRepo.TrendingRepoViewModel" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:animateLayoutChanges="true"
-        tools:context=".trendingRepo.TrendingRepoFragment">
+        app:refreshing="@{viewModel.apiStatus == ApiStatus.REFRESH}"
+        app:onRefreshListener="@{() -> viewModel.onRefresh()}">
 
-        <ImageView
-            android:id="@+id/loading_bar"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/loading_animation"
-            android:visibility="@{ viewModel.apiStatus == ApiStatus.LOADING ? View.VISIBLE : View.GONE }"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_gravity="center" />
-
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/sleep_list"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:listitem="@layout/row_item_trending_repos"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            tools:itemCount="3" />
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            tools:context=".trendingRepo.TrendingRepoFragment">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageView
+                android:id="@+id/loading_bar"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/loading_animation"
+                android:visibility="@{ viewModel.apiStatus == ApiStatus.LOADING ? View.VISIBLE : View.GONE }"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_gravity="center" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/sleep_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:listitem="@layout/row_item_trending_repos"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="3" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 </layout>
