@@ -11,7 +11,10 @@
         tools:layout="@layout/fragment_trending_repos">
         <action
             android:id="@+id/action_trendingRepoFragment_to_networkErrorFragment"
-            app:destination="@id/networkErrorFragment" />
+            app:destination="@id/networkErrorFragment"
+            app:launchSingleTop="true"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_in_left"/>
     </fragment>
     <fragment
         android:id="@+id/networkErrorFragment"
@@ -20,6 +23,10 @@
         tools:layout="@layout/fragment_error_state">
         <action
             android:id="@+id/action_networkErrorFragment_to_trendingRepoFragment"
-            app:destination="@id/trendingRepoFragment" />
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:launchSingleTop="true"
+            app:destination="@id/trendingRepoFragment"
+            app:popUpTo="@id/trendingRepoFragment"/>
     </fragment>
 </navigation>
