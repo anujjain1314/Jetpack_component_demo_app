@@ -16,7 +16,6 @@ data class TrendingRepoDataModel (
     val stars : Int,
     val forks : Int,
     val currentPeriodStars : Int,
-    val builtBy : List<BuiltBy>,
     // to store State of the item
     var expanded : Boolean = false
 ){
