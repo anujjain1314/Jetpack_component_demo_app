@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.anujjain.getMegaAssignment.databinding.RowItemTrendingReposBinding
-import com.anujjain.getMegaAssignment.network.TrendingRepoDataModel
+import com.anujjain.getMegaAssignment.database.TrendingRepoDataModel
 
 class TrendingRepoAdapter : ListAdapter<TrendingRepoDataModel,TrendingRepoAdapter.TrendingRepoViewHolder>(DiffCallback) {
 

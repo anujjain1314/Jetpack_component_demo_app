@@ -1,5 +1,6 @@
 package com.anujjain.getMegaAssignment.network
 
+import com.anujjain.getMegaAssignment.database.TrendingRepoDataModel
 import retrofit2.http.GET
 
 interface RetrofitApiInterface {

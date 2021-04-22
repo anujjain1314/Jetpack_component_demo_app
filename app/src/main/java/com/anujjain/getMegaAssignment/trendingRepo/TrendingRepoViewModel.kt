@@ -3,7 +3,7 @@ package com.anujjain.getMegaAssignment.trendingRepo
 import androidx.lifecycle.*
 import com.anujjain.getMegaAssignment.ApiStatus
 import com.anujjain.getMegaAssignment.network.RetrofitApiService
-import com.anujjain.getMegaAssignment.network.TrendingRepoDataModel
+import com.anujjain.getMegaAssignment.database.TrendingRepoDataModel
 import kotlinx.coroutines.launch
 
 import java.lang.Exception
