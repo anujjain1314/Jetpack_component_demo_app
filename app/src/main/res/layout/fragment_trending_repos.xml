@@ -5,7 +5,6 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-        <import type="com.anujjain.getMegaAssignment.ApiStatus"/>
         <import type="android.view.View"/>
         <variable
             name="viewModel"

@@ -8,7 +8,6 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.SimpleItemAnimator
-import com.anujjain.getMegaAssignment.ApiStatus
 import com.anujjain.getMegaAssignment.R
 import com.anujjain.getMegaAssignment.databinding.FragmentTrendingReposBinding
 

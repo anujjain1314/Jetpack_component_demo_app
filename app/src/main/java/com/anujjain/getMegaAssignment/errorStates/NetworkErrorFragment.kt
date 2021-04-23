@@ -9,7 +9,6 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import com.anujjain.getMegaAssignment.ApiStatus
 import com.anujjain.getMegaAssignment.R
 import com.anujjain.getMegaAssignment.databinding.FragmentErrorStateBinding
 
