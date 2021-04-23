@@ -15,6 +15,16 @@ import com.anujjain.getMegaAssignment.databinding.FragmentTrendingReposBinding
 
 class TrendingRepoFragment : Fragment() {
 
+    /**
+     * One way to delay creation of the viewModel until an appropriate lifecycle method is to use
+     * lazy. This requires that viewModel not be referenced before onActivityCreated, which we
+     * do in this Fragment.
+     */
+    private val viewModel : TrendingRepoViewModel by lazy {
+        val activity = requireNotNull(this.activity){"You can only access the viewModel after onActivityCreated()"}
+        ViewModelProvider(this,TrendingRepoViewModelFactory(activity.application)).get(TrendingRepoViewModel::class.java)
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -25,23 +35,22 @@ class TrendingRepoFragment : Fragment() {
             R.layout.fragment_trending_repos, container, false
         )
 
-        val viewModel = ViewModelProvider(this).get(TrendingRepoViewModel::class.java)
-
         // Allows Data Binding to Observe LiveData with the lifecycle of this Fragment
         binding.lifecycleOwner = this
 
         // Giving the binding access to the TrendingRepoViewModel
         binding.viewModel = viewModel
 
-        // Removes blinks
+        // Removes blinks from recycler view when item view are expanded or collapsed
         (binding.sleepListRecyclerView.itemAnimator as SimpleItemAnimator).supportsChangeAnimations = false
 
         /**
          * observe the [viewModel.apiStatus] and navigate to [NetworkErrorFragment] when its value is [ApiStatus.ERROR]
          */
-        viewModel.apiStatus.observe(viewLifecycleOwner, Observer { apiStatus ->
-            if (apiStatus == ApiStatus.ERROR) {
+        viewModel.eventNetworkError.observe(viewLifecycleOwner, Observer { isNetworkError ->
+            if (isNetworkError) {
                 findNavController().navigate(R.id.action_trendingRepoFragment_to_networkErrorFragment)
+                viewModel.onNetworkErrorShown()
             }
 
         })

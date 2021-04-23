@@ -1,5 +1,6 @@
 package com.anujjain.getMegaAssignment
 
+import android.view.View
 import android.widget.ImageView
 import androidx.core.net.toUri
 import androidx.databinding.BindingAdapter
@@ -21,5 +22,18 @@ fun bindImage(imgView: ImageView, imgUrl: String?) {
                 .placeholder(R.drawable.loading_animation)
                 .error(R.drawable.ic_broken_image))
             .into(imgView)
+    }
+}
+
+
+/**
+ * Binding adapter used to hide the spinner once data is available.
+ */
+@BindingAdapter("isNetworkError", "repoList")
+fun hideIfNetworkError(view: View, isNetWorkError: Boolean, playlist: Any?) {
+    view.visibility = if (playlist != null) View.GONE else View.VISIBLE
+
+    if(isNetWorkError) {
+        view.visibility = View.GONE
     }
 }
