@@ -1,10 +1,10 @@
-package com.anujjain.getMegaAssignment.trendingRepo
+package com.anujjain.androidFundamentals.trendingRepo
 
 import android.app.Application
 import androidx.lifecycle.*
-import com.anujjain.getMegaAssignment.database.TrendingRepoDataBase.Companion.getInstance
-import com.anujjain.getMegaAssignment.database.TrendingRepoDataModel
-import com.anujjain.getMegaAssignment.repository.TrendingRepoRepository
+import com.anujjain.androidFundamentals.database.TrendingRepoDataBase.Companion.getInstance
+import com.anujjain.androidFundamentals.database.TrendingRepoDataModel
+import com.anujjain.androidFundamentals.repository.TrendingRepoRepository
 import kotlinx.coroutines.launch
 
 import java.lang.Exception
@@ -102,7 +102,7 @@ class TrendingRepoViewModel(app: Application) : ViewModel() {
     /**
      * Resets the event [_eventForceRefresh] when data is refreshed forcefully .
      */
-    fun forceRefreshDone() {
+    private fun forceRefreshDone() {
         _eventForceRefresh.value = false
     }
 

@@ -1,4 +1,4 @@
-package com.anujjain.getMegaAssignment.database
+package com.anujjain.androidFundamentals.database
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

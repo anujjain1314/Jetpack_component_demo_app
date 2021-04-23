@@ -1,6 +1,6 @@
-package com.anujjain.getMegaAssignment.network
+package com.anujjain.androidFundamentals.network
 
-import com.anujjain.getMegaAssignment.ApplicationSettings
+import com.anujjain.androidFundamentals.ApplicationSettings
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

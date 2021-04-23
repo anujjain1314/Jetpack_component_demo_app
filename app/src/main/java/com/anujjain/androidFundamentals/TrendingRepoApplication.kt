@@ -1,11 +1,10 @@
-package com.anujjain.getMegaAssignment
+package com.anujjain.androidFundamentals
 
 import android.app.Application
-import android.util.Log
 import androidx.work.ExistingPeriodicWorkPolicy
 import androidx.work.PeriodicWorkRequestBuilder
 import androidx.work.WorkManager
-import com.anujjain.getMegaAssignment.workManagers.RefreshRepoDataWorker
+import com.anujjain.androidFundamentals.workManagers.RefreshRepoDataWorker
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

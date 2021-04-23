@@ -1,4 +1,4 @@
-package com.anujjain.getMegaAssignment.database
+package com.anujjain.androidFundamentals.database
 
 import android.content.Context
 import androidx.room.Database

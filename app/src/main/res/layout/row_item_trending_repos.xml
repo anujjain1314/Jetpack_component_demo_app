@@ -8,7 +8,7 @@
         <import type="android.graphics.Color"/>
         <variable
             name="dataModel"
-            type="com.anujjain.getMegaAssignment.database.TrendingRepoDataModel" />
+            type="com.anujjain.androidFundamentals.database.TrendingRepoDataModel" />
 
     </data>
 

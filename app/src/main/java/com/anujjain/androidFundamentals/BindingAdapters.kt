@@ -1,4 +1,4 @@
-package com.anujjain.getMegaAssignment
+package com.anujjain.androidFundamentals
 
 import android.view.View
 import android.widget.ImageView

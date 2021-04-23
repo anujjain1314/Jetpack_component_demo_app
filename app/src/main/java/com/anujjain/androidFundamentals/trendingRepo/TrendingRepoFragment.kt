@@ -1,4 +1,4 @@
-package com.anujjain.getMegaAssignment.trendingRepo
+package com.anujjain.androidFundamentals.trendingRepo
 
 import android.os.Bundle
 import android.view.*
@@ -8,8 +8,8 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.SimpleItemAnimator
-import com.anujjain.getMegaAssignment.R
-import com.anujjain.getMegaAssignment.databinding.FragmentTrendingReposBinding
+import com.anujjain.androidFundamentals.R
+import com.anujjain.androidFundamentals.databinding.FragmentTrendingReposBinding
 
 
 class TrendingRepoFragment : Fragment() {

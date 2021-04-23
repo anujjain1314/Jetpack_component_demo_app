@@ -1,6 +1,6 @@
-package com.anujjain.getMegaAssignment.network
+package com.anujjain.androidFundamentals.network
 
-import com.anujjain.getMegaAssignment.database.TrendingRepoDataModel
+import com.anujjain.androidFundamentals.database.TrendingRepoDataModel
 import retrofit2.http.GET
 
 interface RetrofitApiInterface {

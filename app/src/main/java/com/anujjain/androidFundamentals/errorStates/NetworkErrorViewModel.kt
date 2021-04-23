@@ -1,4 +1,4 @@
-package com.anujjain.getMegaAssignment.errorStates
+package com.anujjain.androidFundamentals.errorStates
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

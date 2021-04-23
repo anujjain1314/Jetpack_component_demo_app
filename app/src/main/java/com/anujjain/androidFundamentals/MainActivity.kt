@@ -1,4 +1,4 @@
-package com.anujjain.getMegaAssignment
+package com.anujjain.androidFundamentals
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

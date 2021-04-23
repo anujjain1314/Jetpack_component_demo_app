@@ -1,12 +1,11 @@
-package com.anujjain.getMegaAssignment
+package com.anujjain.androidFundamentals
 
 import androidx.room.Room
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
-import com.anujjain.getMegaAssignment.database.BuiltBy
-import com.anujjain.getMegaAssignment.database.TrendingRepoDAO
-import com.anujjain.getMegaAssignment.database.TrendingRepoDataBase
-import com.anujjain.getMegaAssignment.database.TrendingRepoDataModel
+import com.anujjain.androidFundamentals.database.TrendingRepoDAO
+import com.anujjain.androidFundamentals.database.TrendingRepoDataBase
+import com.anujjain.androidFundamentals.database.TrendingRepoDataModel
 import org.junit.After
 import org.junit.Before
 import org.junit.Test

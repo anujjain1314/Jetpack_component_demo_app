@@ -1,4 +1,4 @@
-package com.anujjain.getMegaAssignment.trendingRepo
+package com.anujjain.androidFundamentals.trendingRepo
 
 import android.app.Application
 import androidx.lifecycle.ViewModel

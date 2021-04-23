@@ -6,7 +6,7 @@
     app:startDestination="@id/trendingRepoFragment">
     <fragment
         android:id="@+id/trendingRepoFragment"
-        android:name="com.anujjain.getMegaAssignment.trendingRepo.TrendingRepoFragment"
+        android:name="com.anujjain.androidFundamentals.trendingRepo.TrendingRepoFragment"
         android:label="TrendingRepoFragment"
         tools:layout="@layout/fragment_trending_repos">
         <action
@@ -18,7 +18,7 @@
     </fragment>
     <fragment
         android:id="@+id/networkErrorFragment"
-        android:name="com.anujjain.getMegaAssignment.errorStates.NetworkErrorFragment"
+        android:name="com.anujjain.androidFundamentals.errorStates.NetworkErrorFragment"
         android:label="NetworkErrorFragment"
         tools:layout="@layout/fragment_error_state">
         <action

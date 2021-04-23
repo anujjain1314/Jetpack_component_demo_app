@@ -8,7 +8,7 @@
         <import type="android.view.View"/>
         <variable
             name="viewModel"
-            type="com.anujjain.getMegaAssignment.trendingRepo.TrendingRepoViewModel" />
+            type="com.anujjain.androidFundamentals.trendingRepo.TrendingRepoViewModel" />
     </data>
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout

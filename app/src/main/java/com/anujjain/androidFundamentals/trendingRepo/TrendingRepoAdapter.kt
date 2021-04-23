@@ -1,12 +1,12 @@
-package com.anujjain.getMegaAssignment.trendingRepo
+package com.anujjain.androidFundamentals.trendingRepo
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.anujjain.getMegaAssignment.databinding.RowItemTrendingReposBinding
-import com.anujjain.getMegaAssignment.database.TrendingRepoDataModel
+import com.anujjain.androidFundamentals.databinding.RowItemTrendingReposBinding
+import com.anujjain.androidFundamentals.database.TrendingRepoDataModel
 
 class TrendingRepoAdapter : ListAdapter<TrendingRepoDataModel,TrendingRepoAdapter.TrendingRepoViewHolder>(DiffCallback) {
 

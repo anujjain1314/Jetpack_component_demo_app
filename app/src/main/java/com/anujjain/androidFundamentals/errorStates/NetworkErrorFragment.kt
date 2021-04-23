@@ -1,4 +1,4 @@
-package com.anujjain.getMegaAssignment.errorStates
+package com.anujjain.androidFundamentals.errorStates
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,8 +9,8 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import com.anujjain.getMegaAssignment.R
-import com.anujjain.getMegaAssignment.databinding.FragmentErrorStateBinding
+import com.anujjain.androidFundamentals.R
+import com.anujjain.androidFundamentals.databinding.FragmentErrorStateBinding
 
 class NetworkErrorFragment : Fragment(){
 

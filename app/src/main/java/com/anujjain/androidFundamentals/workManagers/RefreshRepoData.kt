@@ -1,11 +1,10 @@
-package com.anujjain.getMegaAssignment.workManagers
+package com.anujjain.androidFundamentals.workManagers
 
 import android.content.Context
-import android.util.Log
 import androidx.work.CoroutineWorker
 import androidx.work.WorkerParameters
-import com.anujjain.getMegaAssignment.database.TrendingRepoDataBase
-import com.anujjain.getMegaAssignment.repository.TrendingRepoRepository
+import com.anujjain.androidFundamentals.database.TrendingRepoDataBase
+import com.anujjain.androidFundamentals.repository.TrendingRepoRepository
 import retrofit2.HttpException
 
 class RefreshRepoDataWorker(appContext: Context,params : WorkerParameters) : CoroutineWorker(appContext,params){

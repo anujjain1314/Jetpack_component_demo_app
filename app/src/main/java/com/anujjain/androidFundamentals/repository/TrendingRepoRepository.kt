@@ -1,10 +1,10 @@
-package com.anujjain.getMegaAssignment.repository
+package com.anujjain.androidFundamentals.repository
 
 import android.util.Log
 import androidx.lifecycle.LiveData
-import com.anujjain.getMegaAssignment.database.TrendingRepoDataBase
-import com.anujjain.getMegaAssignment.database.TrendingRepoDataModel
-import com.anujjain.getMegaAssignment.network.RetrofitApiService
+import com.anujjain.androidFundamentals.database.TrendingRepoDataBase
+import com.anujjain.androidFundamentals.database.TrendingRepoDataModel
+import com.anujjain.androidFundamentals.network.RetrofitApiService
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
