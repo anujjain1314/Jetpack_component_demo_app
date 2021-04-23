@@ -1,6 +1,7 @@
 package com.anujjain.getMegaAssignment
 
 import android.app.Application
+import android.util.Log
 import androidx.work.ExistingPeriodicWorkPolicy
 import androidx.work.PeriodicWorkRequestBuilder
 import androidx.work.WorkManager
@@ -22,6 +23,7 @@ class TrendingRepoApplication : Application(){
 
     private fun delayedInit(){
         applicationScope.launch {
+            //Log.e("TrendingRepoApplication", "request for work sateted")
             setUpRecurringWork()
         }
     }

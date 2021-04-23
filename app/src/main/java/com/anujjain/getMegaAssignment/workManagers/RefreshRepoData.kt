@@ -1,12 +1,12 @@
 package com.anujjain.getMegaAssignment.workManagers
 
 import android.content.Context
+import android.util.Log
 import androidx.work.CoroutineWorker
 import androidx.work.WorkerParameters
 import com.anujjain.getMegaAssignment.database.TrendingRepoDataBase
 import com.anujjain.getMegaAssignment.repository.TrendingRepoRepository
 import retrofit2.HttpException
-import java.lang.Exception
 
 class RefreshRepoDataWorker(appContext: Context,params : WorkerParameters) : CoroutineWorker(appContext,params){
     companion object{
@@ -19,6 +19,7 @@ class RefreshRepoDataWorker(appContext: Context,params : WorkerParameters) : Cor
 
         try {
             repository.refreshRepoList()
+            //Log.e("RefreshRepoDataWorker", "data sync done successfully")
         }catch (e: HttpException){
             Result.retry()
         }
